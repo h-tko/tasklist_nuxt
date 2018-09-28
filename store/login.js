@@ -1,6 +1,7 @@
 export const state = () => ({
   email: "",
-  password: ""
+  password: "",
+  authenticated: false
 })
 
 export const mutations = {
@@ -9,5 +10,8 @@ export const mutations = {
   },
   updatePassword(state, password) {
     state.password = password
+  },
+  isAuthenticated(state) {
+    state.authenticated = true
   }
 }

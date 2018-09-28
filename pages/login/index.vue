@@ -40,7 +40,8 @@ export default {
   },
   methods: {
     login() {
-      alert(this.$store.state.login.email);
+      this.$store.commit("login/isAuthenticated");
+      this.$router.push("/");
     }
   }
 };
